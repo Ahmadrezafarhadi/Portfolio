@@ -7,16 +7,16 @@
     }
 }
 html {
-    direction: rtl; /* چون سایت راست‌چینه */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  body {
-    overflow-y: auto;
-    direction: rtl;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  direction: rtl; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+body {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto; 
+}

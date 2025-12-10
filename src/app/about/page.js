@@ -18,7 +18,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 pb-14 bg-gradient-to-b text-white">
+    <section className="relative min-h-screen w-full px-6 flex flex-col md:flex-row items-center justify-center gap-10 pb-14 bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -55,11 +55,11 @@ export default function AboutPage() {
               key={skill.name}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ display: index * 0.15 }}
+              transition={{ delay: index * 0.15 }}
             >
               <div className="flex justify-between text-sm mb-1">
                 <span>{skill.name}</span>
-                <span>{skill.level}</span>
+                <span>{skill.level}%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <motion.div
