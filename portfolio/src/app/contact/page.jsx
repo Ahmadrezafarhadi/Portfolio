@@ -4,8 +4,8 @@ import { FaGithub, FaTelegram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="fixed inset-0 flex flex-col justify-center items-center text-white px-6 bg-transparent overflow-hidden">
-      <div className="max-w-4xl text-center mb-12">
+    <section className="min-h-screen flex flex-col justify-center items-center text-white px-6 py-16">
+      <div className="container text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

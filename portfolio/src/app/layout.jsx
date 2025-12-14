@@ -9,8 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="relative min-h-screen overflow-x-hidden bg-gray-950 text-white font-vazir">
-        <ClientLayout>{children}</ClientLayout>
+      <body className="relative min-h-screen overflow-x-hidden text-white">
+        <ClientLayout>
+          <div className="container">{children}</div>
+        </ClientLayout>
       </body>
     </html>
   );

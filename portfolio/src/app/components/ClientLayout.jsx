@@ -13,7 +13,6 @@ export default function ClientLayout({ children }) {
     let particles = [];
     const numParticles = 50;
 
-    // تنظیم اندازهٔ canvas
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -21,7 +20,6 @@ export default function ClientLayout({ children }) {
     resize();
     window.addEventListener("resize", resize);
 
-    // ساخت ذرات اولیه
     for (let i = 0; i < numParticles; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -34,7 +32,6 @@ export default function ClientLayout({ children }) {
       });
     }
 
-    // انیمیشن ذرات
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((p) => {
@@ -66,14 +63,16 @@ export default function ClientLayout({ children }) {
     <>
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full bg-gray-950 z-0"
+        className="fixed inset-0 w-full h-full opacity-30 pointer-events-none z-0"
       />
 
       <div className="relative z-20">
         <NavBar />
       </div>
 
-      <main className="relative z-10 pt-24 px-6">{children}</main>
+      <main className="relative z-10 pt-28 pb-16">
+        <div className="container">{children}</div>
+      </main>
     </>
   );
 }

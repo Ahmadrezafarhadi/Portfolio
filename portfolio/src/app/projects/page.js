@@ -29,8 +29,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="min-h-screen text-white py-8 px-6">
-      <div className="max-w-6xl mx-auto text-center mb-16">
+    <section className="min-h-screen text-white py-12">
+      <div className="container text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export default function Projects() {
         <p className="text-gray-400 mt-3">پروژه‌هایی که انجام داده‌ام</p>
       </div>
 
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -50,7 +50,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ scale: 1.03 }}
-            className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer bg-gray-900/40 backdrop-blur-md border border-gray-800 hover:border-blue-600 transition-all duration-500"
+              className="relative group rounded-2xl overflow-hidden shadow-2xl cursor-pointer bg-gray-900/30 backdrop-blur-md border border-gray-800 hover:shadow-[0_10px_30px_rgba(99,102,241,0.12)] hover:border-[color:var(--accent-from)] transition-all duration-500"
           >
             {/* تصویر پروژه */}
             <div className="relative w-full h-56">
@@ -64,7 +64,7 @@ export default function Projects() {
             </div>
 
             {/* جزئیات پروژه */}
-            <div className="p-5">
+            <div className="p-6">
               <h3 className="text-xl font-semibold text-blue-400 mb-2">
                 {project.title}
               </h3>
