@@ -9,10 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="relative min-h-screen overflow-x-hidden text-white">
-        <ClientLayout>
-          <div className="container">{children}</div>
-        </ClientLayout>
+      <body className="relative min-h-screen overflow-x-hidden text-white font-vazir custom-scrollbar">
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
