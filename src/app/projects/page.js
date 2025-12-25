@@ -23,14 +23,13 @@ const projects = [
     description: "وبسایت دمای هوا React.js",
     image: "/images/weather.png",
     tech: ["React.js"],
-    link: "https://weather-ij9cgvyfi-ahmadrezas-projects-a87536cf.vercel.app/",
+    link: "https://weather-app-sandy-zeta-44.vercel.app/",
   },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="min-h-screen text-white py-20 px-6">
-      {/* Section Header */}
       <div className="max-w-7xl mx-auto text-center mb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,13 +49,12 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl text-gray-400 max-w-2xl mx-auto"
+          className="text-xl text-slate-400 max-w-2xl mx-auto"
         >
           پروژه‌هایی که با عشق و خلاقیت ساخته‌ام
         </motion.p>
       </div>
 
-      {/* Projects Grid */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <motion.div
@@ -68,9 +66,7 @@ export default function Projects() {
             whileHover={{ y: -8 }}
             className="group relative"
           >
-            {/* Main Card */}
-            <div className="relative h-full glass-effect glass-effect-hover rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500">
-              {/* Project Image */}
+            <div className="relative h-full glass-effect rounded-2xl overflow-hidden border border-slate-700/30 transition-all duration-500">
               <div className="relative w-full h-64 overflow-hidden">
                 <Image
                   src={project.image}
@@ -80,7 +76,6 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                {/* Overlay Content */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -92,11 +87,10 @@ export default function Projects() {
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                    <p className="text-white font-bold text-sm leading-relaxed mb-6 line-clamp-3">
                       {project.description}
                     </p>
 
-                    {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech, i) => (
                         <motion.span
@@ -115,7 +109,6 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* CTA Button */}
                     <motion.a
                       href={project.link}
                       target="_blank"
@@ -143,14 +136,12 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Hover Glow Effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-2xl blur-xl transition-all duration-500 pointer-events-none" />
             </div>
           </motion.div>
         ))}
       </div>
 
-      {/* Call to Action */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -158,11 +149,11 @@ export default function Projects() {
         viewport={{ once: true }}
         className="text-center mt-20"
       >
-        <div className="glass-effect glass-effect-hover rounded-2xl p-8 max-w-2xl mx-auto border border-white/10">
-          <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto border border-slate-700/30">
+          <h3 className="text-2xl font-bold text-slate-50 mb-4">
             علاقه‌مند به همکاری هستید؟
           </h3>
-          <p className="text-gray-400 mb-6">
+          <p className="text-slate-400 mb-6">
             پروژه بعدی‌تان را با هم بسازیم. بیایید در مورد ایده‌های شما صحبت
             کنیم.
           </p>
