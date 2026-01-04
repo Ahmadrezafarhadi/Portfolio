@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "React.js CryptoCurrency",
+    title: "CryptoCurrency",
     description:
       "وبسایت ارزهای دیجیتال مدرن و واکنشگرا با React.js , TailwindCSS, GraphQl",
     image: "/images/crypto.png",
@@ -12,18 +12,25 @@ const projects = [
     link: "https://crypto-app-one-pink.vercel.app/",
   },
   {
-    title: "React.js Library",
+    title: "Library",
     description: "وبسایت کتابخانه مدرن و واکنش‌گرا با React.js و TailwindCSS",
     image: "/images/library.png",
     tech: ["React.js", "Tailwind"],
     link: "https://library-fawn-one.vercel.app/",
   },
   {
-    title: "React.js Weather",
+    title: "Weather",
     description: "وبسایت دمای هوا React.js",
     image: "/images/weather.png",
     tech: ["React.js"],
     link: "https://weather-app-sandy-zeta-44.vercel.app/",
+  },
+  {
+    title: "Gold",
+    description: "وبسایت طلا",
+    image: "/images/gold.png",
+    tech: ["React.js , Next.js , TailwindCss , Typescript"],
+    link: "https://zarvit.vercel.app/",
   },
 ];
 
@@ -83,11 +90,11 @@ export default function Projects() {
                     transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
                     viewport={{ once: true }}
                   >
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gradient transition-all duration-300">
+                    <h3 className="text-2xl font-bold text-purple-300 mb-3 group-hover:text-gradient transition-all duration-300">
                       {project.title}
                     </h3>
 
-                    <p className="text-white font-bold text-sm leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-purple-200 font-bold text-sm leading-relaxed mb-6 line-clamp-3">
                       {project.description}
                     </p>
 
